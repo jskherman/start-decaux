@@ -16,7 +16,7 @@
 	--base-txt: #4D6358; */
   
 	--background-alt: #26221F;
-	--background: -moz-linear-gradient(bottom right, #211D1B, #434343);
+	--background: linear-gradient(bottom right, #211D1B, #434343);
 	--base-txt: #4D6358;
   
   	/* background: -moz-linear-gradient(bottom right, #211D1B, #434343);
