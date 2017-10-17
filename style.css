@@ -153,18 +153,18 @@ div#grid table tr td a img {
 	z-index: 0;
 	top: 15px;
 }
-/*div#grid table tr td a:focus img, div#grid table tr td a:hover img {
+div#grid table tr td a:focus img, div#grid table tr td a:hover img {
 	-webkit-filter: drop-shadow(3px 3px 0 rgba(200,50,50,1)) drop-shadow(-3px -3px 0 rgba(50,200,150,1));
-	filter:drop-shadow(3px 3px 0 rgba(200,50,50,1)) drop-shadow(-3px -3px 0 rgba(50,200,150,1));*/
+	filter:drop-shadow(3px 3px 0 rgba(200,50,50,1)) drop-shadow(-3px -3px 0 rgba(50,200,150,1));
 }
 div#grid table tr td a:focus {
 	border-bottom: 15px solid rgba(50,200,150,.3);
 	background-color: #2E2926;
 }
-/*div#grid table tr td a:focus, div#grid table tr td a:hover {
+div#grid table tr td a:focus, div#grid table tr td a:hover {
 	text-shadow: 3px 3px 0 rgba(200,50,50,.7), -3px -3px 0 rgba(50,200,150,.7);
 	box-shadow: 3px 3px 0 rgba(200,50,50,.5), -3px -3px 0 rgba(50,200,150,.5);
-	outline: 0;*/
+	outline: 0;
 }
 footer div#liveClock {
 	-webkit-touch-callout: none;
