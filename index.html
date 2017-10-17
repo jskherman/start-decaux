@@ -1,149 +1,183 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-
 	<title>home</title>
-
 	<meta charset="utf-8">
-
-	<link rel="stylesheet" type="text/css" href="style.css">
-
+	<link href="style.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript">
 
-		function startClock() {
-			var now = new Date();
-			var hor = now.getHours() < 10 ? '0' + now.getHours() : now.getHours();
-			var min = now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes();
-			document.getElementById('liveClock').innerHTML = hor + '<span>:</span>' + min;
-			// : inside span to select it in the css to make it blink
-			var reWrite = setTimeout(startClock, 1000);
-		}
+	                function startClock() {
+	                    var now = new Date();
+	                    var hor = now.getHours() < 10 ? '0' + now.getHours() : now.getHours();
+	                    var min = now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes();
+	                    document.getElementById('liveClock').innerHTML = hor + '<span>:<\/span>' + min;
+	                    // : inside span to select it in the css to make it blink
+	                    var reWrite = setTimeout(startClock, 1000);
+	                }
 
 	</script>
-
 </head>
+
 <body onload="startClock()">
+	<div id="blackout">
+	</div>
+	<span id="escape">[ESC] To Return</span> <span id="instructionsToggle" onclick="helpToggle()">[H]</span> <span id="instructions"></span>
 
-	<div id="blackout"></div>
-	<span id="escape">[ESC] To Return</span>
-	<span id="instructionsToggle" onclick="helpToggle()">[H]</span>
-	<span id="instructions">
-		<div>
-			<table>
-				<tr>
-					<td><kbd>h</kbd></td>
-					<td>Toggle Help</td>
-				</tr>
-				<tr>
-					<td><kbd>Esc</kbd></td>
-					<td>Return to blocks</td>
-				</tr>
-				<tr>
-					<td><kbd>w</kbd><kbd>↑</kbd></td>
-					<td>Move Up</td>
-				</tr>
-				<tr>
-					<td><kbd>s</kbd><kbd>↓</kbd></td>
-					<td>Move Down</td>
-				</tr>
-				<tr>
-					<td><kbd>a</kbd><kbd>←</kbd></td>
-					<td>Move Left</td>
-				</tr>
-				<tr>
-					<td><kbd>d</kbd><kbd>→</kbd></td>
-					<td>Move Right</td>
-				</tr>
-				<tr>
-					<td><kbd>Space</kbd></td>
-					<td>Focus Search</td>
-				</tr>
-			</table>
-		</div>
-	</span>
-
-	<div id="grid">
+	<div>
+		<span id="instructions"></span>
 
 		<table>
-
 			<tr>
-				<td>
-					<a href="https://inbox.google.com/u/0/" id="1" class="lBox">
-						<img src="src/ib.png">
-						<h3>INBOX</h3>
-						<p>/u/0/</p>
-					</a>
+				<td><kbd>h</kbd>
 				</td>
-				<td>
-					<a href="https://keep.google.com/u/0/" id="2" class="lBox">
-						<img src="src/keep.png">
-						<h3>KEEP</h3>
-						<p>To do</p>
-					</a>
-				</td>
-				<td>
-					<a href="https://stackedit.io/app" id="3" class="lBox">
-						<img src="src/md.png">
-						<h3>STACKEDIT</h3>
-						<p>Work</p>
-					</a>
-				</td>
-				<td>
-					<a href="https://drive.google.com" id="4" class="lBox">
-						<img src="src/drive.png">
-						<h3>GOOGLE DRIVE</h3>
-						<p>More work</p>
-					</a>
-				</td>
+
+				<td>Toggle Help</td>
 			</tr>
 
 
 			<tr>
-				<td>
-					<a href="http://forum.clubitr.com.au/forum.php" id="5" class="lBox">
-						<img src="src/r.png">
-						<h3>CLUBITR</h3>
-						<p>VTEC YO</p>
-					</a>
+				<td><kbd>Esc</kbd>
 				</td>
-				<td>
-					<a href="https://www.youtube.com/feed/subscriptions" id="6" class="lBox">
-						<img src="src/yt.png">
-						<h3>YOUTUBE</h3>
-						<p>Cat videos</p>
-					</a>
-				</td>
-				<td>
-					<a href="https://www.ebay.com.au/" id="7" class="lBox">
-						<img src="src/eb.png">
-						<h3>EBAY</h3>
-						<p>$$$</p>
-					</a>
-				</td>
-				<td>
-					<a href="https://www.gumtree.com.au/" id="8" class="lBox">
-						<img src="src/gt.png">
-						<h3>GUMTREE</h3>
-						<p>Craigslist but not craigslist</p>
-					</a>
-				</td>
+
+				<td>Return to blocks</td>
 			</tr>
 
 
+			<tr>
+				<td><kbd>w</kbd><kbd>↑</kbd>
+				</td>
+
+				<td>Move Up</td>
+			</tr>
+
+
+			<tr>
+				<td><kbd>s</kbd><kbd>↓</kbd>
+				</td>
+
+				<td>Move Down</td>
+			</tr>
+
+
+			<tr>
+				<td><kbd>a</kbd><kbd>←</kbd>
+				</td>
+
+				<td>Move Left</td>
+			</tr>
+
+
+			<tr>
+				<td><kbd>d</kbd><kbd>→</kbd>
+				</td>
+
+				<td>Move Right</td>
+			</tr>
+
+
+			<tr>
+				<td><kbd>Space</kbd>
+				</td>
+
+				<td>Focus Search</td>
+			</tr>
 		</table>
-
 	</div>
 
-	<footer>
 
+	<div id="grid">
+		<table>
+			<tr>
+				<td>
+					<a class="lBox" href="https://inbox.google.com/u/0/" id="1"><img src="src/ib.png">
+
+					<h3>INBOX</h3>
+
+
+					<p>/u/0/</p></a>
+				</td>
+
+				<td>
+					<a class="lBox" href="https://keep.google.com/u/0/" id="2"><img src="src/keep.png">
+
+					<h3>KEEP</h3>
+
+
+					<p>To do</p></a>
+				</td>
+
+				<td>
+					<a class="lBox" href="https://stackedit.io/app" id="3"><img src="src/md.png">
+
+					<h3>STACKEDIT</h3>
+
+
+					<p>Work</p></a>
+				</td>
+
+				<td>
+					<a class="lBox" href="https://drive.google.com" id="4"><img src="src/drive.png">
+
+					<h3>GOOGLE DRIVE</h3>
+
+
+					<p>More work</p></a>
+				</td>
+			</tr>
+
+
+			<tr>
+				<td>
+					<a class="lBox" href="http://forum.clubitr.com.au/forum.php" id="5"><img src="src/r.png">
+
+					<h3>CLUBITR</h3>
+
+
+					<p>VTEC YO</p></a>
+				</td>
+
+				<td>
+					<a class="lBox" href="https://www.youtube.com/feed/subscriptions" id="6"><img src="src/yt.png">
+
+					<h3>YOUTUBE</h3>
+
+
+					<p>Cat videos</p></a>
+				</td>
+
+				<td>
+					<a class="lBox" href="https://www.ebay.com.au/" id="7"><img src="src/eb.png">
+
+					<h3>EBAY</h3>
+
+
+					<p>$$$</p></a>
+				</td>
+
+				<td>
+					<a class="lBox" href="https://www.gumtree.com.au/" id="8"><img src="src/gt.png">
+
+					<h3>GUMTREE</h3>
+
+
+					<p>Craigslist but not craigslist</p></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+
+	<footer>
 		<form action="https://google.com/search" method="get">
-			<input type="text" name="q" placeholder="[Space] to search" id="search" autocomplete="off">
+			<input autocomplete="off" id="search" name="q" placeholder="[Space] to search" type="text">
 		</form>
 
-		<div id="liveClock"></div>
 
+		<div id="liveClock">
+		</div>
 	</footer>
-
+	<script src="keys.js" type="text/javascript">
+	</script>
 </body>
-<script type="text/javascript" src="keys.js"></script>
 </html>
