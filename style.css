@@ -11,18 +11,9 @@
 }
 
 :root {
-	/* --background-alt: #26221F;
-	--background: #211D1B;
-	--base-txt: #4D6358; */
-  
 	--background-alt: #26221F;
-	--background: linear-gradient(bottom right, #211D1B, #434343);
+	--background: #211D1B;
 	--base-txt: #4D6358;
-  
-  	/* background: -moz-linear-gradient(bottom right, #211D1B, #434343);
-	background: -webkit-linear-gradient(left top, #211D1B, #434343);
-	background: -o-linear-gradient(bottom right, #211D1B, #434343); */
-
 }
 
 ::-webkit-input-placeholder {
