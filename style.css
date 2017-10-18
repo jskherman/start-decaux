@@ -12,8 +12,7 @@
 
 :root {
 	--background-alt: #211D1B;
-	/* --background: #232526; */
-  	--background: linear-gradient(left top, #232526, #414345)
+	--background: #232526;
 	--base-txt: #4D6358;
 }
 
