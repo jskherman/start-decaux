@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
 	<title>startpage</title>
@@ -7,7 +8,7 @@
 	<meta charset="utf-8">
 
 	<link rel="stylesheet" type="text/css" href="style.css">
-  	<link rel="icon" type="image/x-icon" href="src/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="src/favicon.ico">
 
 	<script type="text/javascript">
 		function startClock() {
@@ -21,19 +22,20 @@
 	</script>
 	<script type="text/javascript">
 		if ('serviceWorker' in navigator) {
-		  window.addEventListener('load', () => {
-			navigator.serviceWorker.register('/sw.js')
-			  .then(registration => {
-				console.log('Service Worker registered with scope:', registration.scope);
-			  })
-			  .catch(error => {
-				console.log('Service Worker registration failed:', error);
-			  });
-		  });
+			window.addEventListener('load', () => {
+				navigator.serviceWorker.register('/sw.js')
+					.then(registration => {
+						console.log('Service Worker registered with scope:', registration.scope);
+					})
+					.catch(error => {
+						console.log('Service Worker registration failed:', error);
+					});
+			});
 		}
 	</script>
 
 </head>
+
 <body onload="startClock()">
 
 	<div id="blackout"></div>
@@ -80,7 +82,8 @@
 
 			<tr>
 				<td>
-					<a href="https://docs.google.com/spreadsheets/d/1g_tdpx8HMnyQvazqzlpqYjWog24osJ-B72z-92iKL_w/edit?pli=1#gid=2105036849&fvid=51997439" id="1" class="lBox">
+					<a href="https://docs.google.com/spreadsheets/d/1g_tdpx8HMnyQvazqzlpqYjWog24osJ-B72z-92iKL_w/edit?pli=1#gid=2105036849&fvid=51997439"
+						id="1" class="lBox">
 						<img src="src/timer.svg">
 						<h3>LIFE TRACKER</h3>
 						<p>Quantifying the self</p>
@@ -94,15 +97,17 @@
 					</a>
 				</td>
 				<td>
-					<a href="https://docs.google.com/spreadsheets/d/1xdm6-FX9sqeqHLrtg30zDPaIB6dtBXpnY95_CRijFS0/edit#gid=1856382156" id="3" class="lBox">
+					<a href="https://docs.google.com/spreadsheets/d/1xdm6-FX9sqeqHLrtg30zDPaIB6dtBXpnY95_CRijFS0/edit#gid=1856382156"
+						id="3" class="lBox">
 						<img src="src/bookup.svg">
 						<h3>BOARD REVIEW</h3>
 						<p>Tracking review progress</p>
 					</a>
 				</td>
-              	<td>
-					
-                 	<a href="https://drive.google.com/drive/folders/1d9ArI5AcQh162jZMIai0uejJR8tDT3RI?usp=drive_link" id="4" class="lBox">
+				<td>
+
+					<a href="https://drive.google.com/drive/folders/1d9ArI5AcQh162jZMIai0uejJR8tDT3RI?usp=drive_link"
+						id="4" class="lBox">
 						<img src="src/file-video2.svg">
 						<h3>ARC LECTURES</h3>
 						<p>Unlimited streaming</p>
@@ -159,4 +164,5 @@
 
 </body>
 <script type="text/javascript" src="keys.js"></script>
+
 </html>
