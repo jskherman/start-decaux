@@ -18,6 +18,15 @@
 			document.getElementById('liveClock').innerHTML = hor + '<span>:</span>' + min;
 			// : inside span to select it in the css to make it blink
 			var reWrite = setTimeout(startClock, 1000);
+
+			// Add conditional statement to change color of hour component
+			if (now.getHours() >= 23 || now.getHours() < 6 || (now.getHours() == 6 && now.getMinutes() == 0)) {
+				document.getElementById('liveClock').style.color = '#DC143C';
+				document.getElementById('liveClock').style.fontWeight = 'bold';
+			} else {
+				document.getElementById('liveClock').style.color = 'var(--base-txt);';
+				document.getElementById('liveClock').style.fontWeight = 'normal';
+			}
 		}
 	</script>
 	<script type="text/javascript">
