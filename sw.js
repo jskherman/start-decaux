@@ -11,6 +11,7 @@ const urlsToCache = [
     '/src/messenger.svg',
     '/src/radar.svg',
     '/src/timer.svg',
+    '/src/rocket.webp',
     '/fonts.css',
     '/style.css',
     'keys.js',
